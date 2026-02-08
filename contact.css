@@ -1,0 +1,385 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    min-height:100vh;
+    background-color:black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#contact{
+    height:100vh;
+    width:100%;
+}
+
+.c1{
+    font-size:40px;
+} 
+.ic1{
+    margin-right:5px;
+}
+
+nav{
+    height:50px;
+    width:100%;
+    background-color:black;
+    display: flex;
+    align-items: center;
+    padding:30px;
+}
+
+.links-container{
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav a{
+    height:100%;
+    padding:0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color:white;
+}
+
+
+nav .tit{
+    margin-right: auto;
+    color: white;
+}
+
+nav .iii{
+    color:white;
+}
+
+#sidebar-active{
+    display: none;
+}
+
+.open-bar,.close-bar{
+    display: none;
+}
+
+.homepage{
+    height:490px;
+    width:100%;
+    background-color:seagreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.maindiv1>.tcs{
+    text-decoration: underline;
+    text-underline-offset:5px;
+    color:white;
+}
+
+
+.maindiv1{
+    height:10%;
+    width:100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:black;
+}
+
+.maindiv2{
+    height:90%;
+    width:100%;
+    background-color:black;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    gap:30px;
+    padding:20px;
+}
+
+.overall{
+    height:80%;
+    width:90%;
+    border:1px solid transparent;
+    display: flex;
+    gap:10px;
+}
+
+.box1{
+    height:100%;
+    width:60%;
+    background-color:transparent;
+    position:relative;
+    animation-name:left;
+    animation-duration:2s;
+    padding:10px;
+}
+.box2{
+    height:100%;
+    width:40%;
+    background-color:transparent;
+    position:relative;
+    animation-name:right;
+    animation-duration:2s;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+}
+.box1>form{
+    height:100%;
+    width:100%;
+    border:2px solid white;
+    border-radius:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    padding:10px;
+}
+.box1>form .ints{
+    height:10%;
+    width:90%;
+    padding:20px;
+    border-radius:30px;
+    outline:none;
+    border:none;
+    font-family:cursive;
+}
+.box1>form textarea{
+    height:70%;
+    width:90%;
+    padding:15px;
+    outline:none;
+    border:none;
+    border-radius:20px;
+    font-family:cursive;
+}
+
+.box1>form button{
+    height:10%;
+    width:20%;
+    padding:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:30px;
+    outline:none;
+    border:none;
+    font-family:cursive;
+}
+
+.box2 .box2sub{
+    height:100%;
+    width:100%;
+    border:2px solid white;
+    border-radius:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-family: cursive;
+    gap:2px;
+    padding:5px;
+}
+
+.soc{
+    height:40px;
+    width:40px;
+    border-radius:50%;
+    border:1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.soclink{
+    color:white;
+}
+
+.b2s1{
+    display: flex;
+    gap:7px; 
+    padding:10px;
+}
+.b2s2{
+    display: flex;
+    gap:7px;
+    padding:10px;
+}
+.b2s3{
+   color:white;
+   text-align: center;
+   padding:10px;
+}
+.b2s3 h6
+{
+    margin-bottom:10px;
+}
+.b2s3 h3{
+    text-decoration: none;
+    color:darkcyan;
+    font-size:10px;
+    margin-bottom:15px;
+}
+
+@keyframes left{
+    0%{
+    left:-100%;
+    }
+    25%{
+    left:-75%;
+    }
+    50%{
+    left:-50%;
+    }
+    75%{
+    left:-25%;
+    }
+    100%{
+    left:0%;   
+    }
+}
+@keyframes right{
+    0%{
+    right:-100%;
+    }
+    25%{
+    right:-75%;
+    }
+    50%{
+    right:-50%;
+    }
+    75%{
+    right:-25%;
+    }
+    100%{
+    right:0%;   
+    }
+} 
+
+@media only screen and (min-width:300px) and (max-width:720px) 
+{
+    .links-container{
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top:0;
+        right:-100%;
+        z-index:10;
+        width:300px;
+        /* background-color:rgba(255, 255, 255, 0.418); */
+        background-color: rgba(0, 0, 0, 0.742);
+        box-shadow:-5px 0 5px rgba(0, 0, 0, 0.25);
+        transition:0.75s ease-out;
+        padding:20px;
+    }   
+    
+    nav a{
+        box-sizing: border-box;
+        height:auto;
+        width:100%;
+        padding:20px 30px;
+        border-radius:5px;
+        justify-content:center;
+        background-color: rgba(169, 169, 169, 0.758);
+        color: black;
+    }
+
+    .open-bar,.close-bar
+    {
+    padding:20px;
+    display:block;
+}
+
+    #sidebar-active:checked ~ .links-container{
+        right:0;
+    }
+
+    #sidebar-active:checked ~ #overlay {
+        height:100%;
+        width:100%;
+        position: fixed;
+        top:0;
+        left:0;
+        z-index:9;
+    }
+
+    nav .tit{
+        display: none;
+}
+    
+}
+
+@media only screen and (min-width:500px) and (max-width:700px) 
+{
+    .overall{
+        height:100%;
+        display: flex;
+        flex-direction: column;
+    }   
+    .box1{
+        height:50%;
+        width:100%;
+    }
+    .box2{
+        height:50%;
+        width:100%;
+    } 
+
+}
+
+@media only screen and (min-width:300px) and (max-width:500px) 
+{
+    .overall{
+        height:100%;
+        display: flex;
+        flex-direction: column;
+    }   
+    .box1{
+        height:50%;
+        width:100%;
+    }
+    .box2{
+        height:50%;
+        width:100%;
+    } 
+  
+}
+
+@media only screen and (min-width:300px) and (max-width:700px) 
+{
+    .box1>form{
+    height:100%;
+    }
+    .box1>form .ints{
+    height:25px;
+    padding:10px;
+    }
+    .box1>form textarea{
+    height:50px;
+    padding:10px;
+    }
+    .box1>form button{
+    height:10%;
+    width:15%;
+    padding:20px;
+    }
+    .b2s1{
+        padding:30px;
+        gap:7px;
+    }
+    .b2s2{
+        padding:0px;
+        gap:7px;
+    }
+
+}
+ 
